@@ -1,8 +1,7 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Newspaper, BookImage, Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -26,6 +25,7 @@ const Header = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[250px] sm:w-[300px]">
+                <SheetTitle className="sr-only">Menú Principal</SheetTitle>
                 <div className="flex justify-center mb-8">
                     <Link href="/">
                       <Image 
@@ -55,8 +55,8 @@ const Header = () => {
               <Image 
                 src="/logo.png"
                 alt="La Navaja Producciones Logo"
-                width={80}
-                height={80}
+                width={160}
+                height={160}
               />
             </Link>
           </div>
