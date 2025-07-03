@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="bg-card border-b border-border shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-28">
           
           <div className="hidden md:flex md:w-1/3 justify-start">
             <Link href="/" className="text-primary hover:text-accent transition-colors">
@@ -55,8 +55,8 @@ const Header = () => {
               <Image 
                 src="/logo.png"
                 alt="La Navaja Producciones Logo"
-                width={160}
-                height={160}
+                width={90}
+                height={90}
               />
             </Link>
           </div>
