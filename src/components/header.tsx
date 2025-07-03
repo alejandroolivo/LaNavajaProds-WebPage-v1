@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Newspaper, BookImage, Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
@@ -27,10 +28,13 @@ const Header = () => {
                 <SheetTitle className="sr-only">Menú Principal</SheetTitle>
                 <div className="flex justify-center mb-8">
                     <Link href="/">
-                      <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="La Navaja Producciones Logo">
-                        <rect width="100" height="100" rx="8" fill="hsl(var(--card))" stroke="hsl(var(--accent))" strokeWidth="2"/>
-                        <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="60" fill="hsl(var(--accent))">N</text>
-                      </svg>
+                      <Image
+                          src="/logo.svg"
+                          alt="La Navaja Producciones Logo"
+                          width={80}
+                          height={80}
+                          priority
+                      />
                     </Link>
                 </div>
                 <nav className="flex flex-col space-y-6">
@@ -49,10 +53,13 @@ const Header = () => {
 
           <div className="flex justify-center w-1/2 md:w-1/3">
             <Link href="/" className="text-primary hover:text-accent transition-colors">
-              <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="La Navaja Producciones Logo">
-                <rect width="100" height="100" rx="8" fill="hsl(var(--card))" stroke="hsl(var(--accent))" strokeWidth="2"/>
-                <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fontFamily="Inter, sans-serif" fontSize="60" fill="hsl(var(--accent))">N</text>
-              </svg>
+              <Image
+                src="/logo.svg"
+                alt="La Navaja Producciones Logo"
+                width={90}
+                height={90}
+                priority
+              />
             </Link>
           </div>
           
