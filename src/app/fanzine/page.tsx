@@ -76,7 +76,7 @@ export default function FanzinePage() {
     <div className="space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold font-headline tracking-tight">Biblioteca de Fanzines</h1>
-        <p className="mt-2 text-lg text-muted-foreground">Una colección curada de publicaciones independientes.</p>
+        <p className="mt-2 text-lg text-muted-foreground">Nuestra colección de fanzines, donde hablamos sobre música, libros, conciertos... cualquier cosa, realmente.</p>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {fanzines.map((fanzine) => (
