@@ -33,6 +33,7 @@ const Header = () => {
                         alt="La Navaja Producciones Logo"
                         width={80}
                         height={80}
+                        unoptimized
                       />
                     </Link>
                 </div>
@@ -57,6 +58,7 @@ const Header = () => {
                 alt="La Navaja Producciones Logo"
                 width={90}
                 height={90}
+                unoptimized
               />
             </Link>
           </div>
