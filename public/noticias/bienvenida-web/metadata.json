@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "slug": "bienvenida-web",
+  "title": "Bienvenides a la nueva web de La Navaja",
+  "description": "Lanzamos este espacio digital donde convergen nuestras noticias, fanzines, ideas y ruido. Una plataforma para compartir lo que nos mueve.",
+  "author": "La Navaja Producciones",
+  "date": "1 de julio, 2025",
+  "tags": ["Bienvenida", "Fanzine", "Noticias"],
+  "hint": "navaja nueva web",
+  "content": [
+    "Después de mucho pensarlo, montar, desmontar, y volver a montar, por fin lanzamos este espacio propio: una web donde concentrar todo lo que hemos ido haciendo durante estos años y lo que está por venir.",
+    "Aquí encontrarás nuestras noticias, crónicas, fanzines, agendas, movidas varias y todo aquello que sentimos la necesidad de compartir. Queremos que esto sea un punto de encuentro, una pequeña plataforma para lo que se mueve en los márgenes.",
+    "Seguiremos editando nuevos números de ‘El Navajazo’, organizando conciertos y colaborando con colectivos afines. Pero ahora todo estará aquí, ordenado —o al menos, reunido—, para que no te pierdas nada.",
+    "Gracias por estar, por leernos, por venir a los bolos, por difundir y por formar parte de todo esto. Si tienes algo que decir, proponer o compartir, este espacio también es tuyo.",
+    "Nos seguimos viendo en los márgenes, en las salas, en los bares, en la calle… y ahora también por aquí."
+  ]
+}
