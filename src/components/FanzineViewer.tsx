@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -21,6 +21,24 @@ export default function FanzineViewer({ title, pdfUrl }: FanzineViewerProps) {
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [isLoading, setIsLoading] = useState(true);
   const [pdfError, setPdfError] = useState<string | null>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const setWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.clientWidth);
+      }
+    };
+    
+    setWidth();
+    
+    window.addEventListener('resize', setWidth);
+    return () => {
+      window.removeEventListener('resize', setWidth);
+    };
+  }, []);
 
   const onDocumentLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
@@ -43,7 +61,7 @@ export default function FanzineViewer({ title, pdfUrl }: FanzineViewerProps) {
         <CardTitle className="text-accent">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="relative w-full aspect-[1/1.414] bg-muted rounded-md overflow-hidden border flex items-center justify-center">
+        <div ref={containerRef} className="relative w-full aspect-[1/1.414] bg-muted rounded-md overflow-hidden border flex items-center justify-center">
             {isLoading && !pdfError && <Loader2 className="h-12 w-12 animate-spin text-muted-foreground" />}
             {pdfError && (
                 <div className="text-center text-destructive p-4">
@@ -51,21 +69,23 @@ export default function FanzineViewer({ title, pdfUrl }: FanzineViewerProps) {
                     <p className="text-sm">{pdfError}</p>
                 </div>
             )}
-            <Document
-                file={pdfUrl}
-                onLoadSuccess={onDocumentLoadSuccess}
-                onLoadError={onDocumentLoadError}
-                loading={<Skeleton className="h-full w-full" />}
-                className={isLoading || pdfError ? 'hidden' : ''}
-            >
-                <Page 
-                    pageNumber={pageNumber} 
-                    renderAnnotationLayer={false}
-                    renderTextLayer={false}
+            {containerWidth > 0 && (
+                <Document
+                    file={pdfUrl}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                    onLoadError={onDocumentLoadError}
                     loading={<Skeleton className="h-full w-full" />}
-                    width={827}
-                />
-            </Document>
+                    className={isLoading || pdfError ? 'hidden' : ''}
+                >
+                    <Page 
+                        pageNumber={pageNumber} 
+                        renderAnnotationLayer={false}
+                        renderTextLayer={false}
+                        loading={<Skeleton className="h-full w-full" />}
+                        width={containerWidth}
+                    />
+                </Document>
+            )}
         </div>
       </CardContent>
       {numPages && !pdfError && (
