@@ -29,7 +29,7 @@ const Header = () => {
                 <div className="flex justify-center mb-8">
                     <Link href="/">
                       <Image
-                          src="/logo.svg"
+                          src="/logos/logo.svg"
                           alt="La Navaja Producciones Logo"
                           width={80}
                           height={80}
