@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { Newspaper, BookImage, Menu, FileImage } from 'lucide-react';
+import { Newspaper, BookImage, Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
@@ -28,13 +27,18 @@ const Header = () => {
                 <SheetTitle className="sr-only">Menú Principal</SheetTitle>
                 <div className="flex justify-center mb-8">
                     <Link href="/">
-                      <Image
-                          src="/logos/logo.svg"
-                          alt="La Navaja Producciones Logo"
-                          width={80}
-                          height={80}
-                          priority
-                      />
+                      <svg
+                        width={40}
+                        height={40}
+                        viewBox="0 0 100 100"
+                        className="text-primary"
+                        aria-label="La Navaja Producciones Logo"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M20 0 V 100 H 35 V 40 L 65 100 H 80 V 0 H 65 V 60 L 35 0 H 20 Z"
+                        />
+                      </svg>
                     </Link>
                 </div>
                 <nav className="flex flex-col space-y-6">
@@ -53,13 +57,18 @@ const Header = () => {
 
           <div className="flex justify-center w-1/2 md:w-1/3">
             <Link href="/" className="text-primary hover:text-accent transition-colors">
-              <Image
-                src="/logo.svg"
-                alt="La Navaja Producciones Logo"
-                width={90}
+               <svg
+                width={180}
                 height={90}
-                priority
-              />
+                viewBox="0 0 100 50"
+                className="text-primary"
+                aria-label="La Navaja Producciones Logo"
+              >
+                <path
+                  fill="currentColor"
+                  d="M25 0 V 50 H 35 V 20 L 65 50 H 75 V 0 H 65 V 30 L 35 0 H 25 Z"
+                />
+              </svg>
             </Link>
           </div>
           
