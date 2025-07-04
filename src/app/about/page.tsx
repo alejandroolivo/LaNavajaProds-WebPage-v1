@@ -1,12 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Target, CircleCheck, Handshake } from 'lucide-react';
+import { Users, Target, CircleCheck, Handshake, FileText  } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-8 fade-in">
       <div className="text-center">
         <h1 className="text-4xl font-bold font-headline tracking-tight">Sobre Nosotros</h1>
-        <p className="mt-2 text-lg text-muted-foreground">La historia detrás de La Navaja Producciones.</p>
+        <p className="mt-2 text-lg text-muted-foreground"></p>
       </div>
 
       <Card>
@@ -43,6 +43,10 @@ export default function AboutPage() {
              <li className="flex items-start">
                 <Users className="w-6 h-6 mr-4 mt-1 text-accent flex-shrink-0" />
                 <span>Creamos espacios donde decidir colectivamente y pasarlo bien.</span>
+            </li>
+             <li className="flex items-start">
+                <FileText className="w-6 h-6 mr-4 mt-1 text-accent flex-shrink-0" />
+                <span>Publicamos fanzines.</span>
             </li>
           </ul>
 
