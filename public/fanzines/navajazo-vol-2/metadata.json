@@ -1,0 +1,11 @@
+
+{
+  "id": 2,
+  "slug": "navajazo-vol-2",
+  "title": "El Navajazo Vol.2",
+  "description": "Fanzine publicado en octubre de 2023.",
+  "coverImage": "https://placehold.co/600x800.png",
+  "tags": ["Fanzine"],
+  "hint": "fanzine vol2",
+  "pdfUrl": "/fanzines/navajazo-vol-2/Navajazo_Vol2.pdf"
+}
